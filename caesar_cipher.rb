@@ -9,8 +9,9 @@ def caeser_cipher(text, shift)
 		count = 0
 		
 		while count < word.length 
-			if ((word[count].ord > 85 && word[count].ord <= 90) || word[count].ord > 117) && word[count] =~ /\w/
-				word[count] = (word[count].ord - 21).chr
+			if ((word[count].ord + shift > 90 && word[count].ord + shift < 97) && word[count] =~ /\w/) ||
+				(word[count].ord + shift > 122 && word[count] =~ /\w/)
+				word[count] = ((word[count].ord + shift) - 26).chr
 			elsif  word[count] =~ /\w/
 				word[count] = (word[count].ord + shift).chr
 			end
