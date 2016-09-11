@@ -3,9 +3,8 @@ def stock_picker(prices)
 	if prices.index(prices.min) < prices.index(prices.max)
     	best_days = [prices.index(prices.min), prices.index(prices.max)]
     else
-    	sell_day = []
-    	buy_day = []
-    	prices_reverse = prices.reverse
+    	sell_day = 0
+    	buy_day = 0
     	difference = 0
     	prices.each do |price|
     		prices.each do |day|
