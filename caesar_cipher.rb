@@ -3,7 +3,8 @@ def caeser_cipher(text, shift)
 	#Splits the words in the string into an array
 	text_array = text.split(" ")
 
-	#Iterates through each character of each word, determines whether its ASCII identity corresponds to a letter, shifts the ASCII identity accordinlgy, and then converts ASCII ID back to its corresponding letter
+	#Iterates through each character of each word, determines whether its ASCII identity corresponds to a letter, 
+	#shifts the ASCII identity accordinlgy, and then converts ASCII ID back to its corresponding letter 
 	text_array.each do |word|
 		
 		count = 0
